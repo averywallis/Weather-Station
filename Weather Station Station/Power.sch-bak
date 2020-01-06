@@ -1,0 +1,230 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L SamacSys_Parts:MIC39100-3.3WS IC1
+U 1 1 5DFEE931
+P 3950 1800
+F 0 "IC1" H 4550 2065 50  0000 C CNN
+F 1 "MIC39100-3.3WS" H 4550 1974 50  0000 C CNN
+F 2 "SOT230P700X180-4N" H 5000 1900 50  0001 L CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/mic39100.pdf" H 5000 1800 50  0001 L CNN
+F 4 "LDO Voltage Regulators 1.0A 1.0% Fixed Voltage LDO" H 5000 1700 50  0001 L CNN "Description"
+F 5 "1.8" H 5000 1600 50  0001 L CNN "Height"
+F 6 "Micrel" H 5000 1500 50  0001 L CNN "Manufacturer_Name"
+F 7 "MIC39100-3.3WS" H 5000 1400 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "998-MIC39100-3.3WS" H 5000 1300 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.com/Search/Refine.aspx?Keyword=998-MIC39100-3.3WS" H 5000 1200 50  0001 L CNN "Mouser Price/Stock"
+F 10 "0453508P" H 5000 1100 50  0001 L CNN "RS Part Number"
+F 11 "http://uk.rs-online.com/web/p/products/0453508P" H 5000 1000 50  0001 L CNN "RS Price/Stock"
+	1    3950 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Management:MCP73831-2-OT U4
+U 1 1 5DFEF7D2
+P 7750 2250
+F 0 "U4" H 7750 2731 50  0000 C CNN
+F 1 "MCP73831-2-OT" H 7750 2640 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 7800 2000 50  0001 L CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf" H 7600 2200 50  0001 C CNN
+F 4 "MCP73831-2-OT" H 7750 2250 50  0001 C CNN "MPN"
+	1    7750 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_B_Micro J1
+U 1 1 5E03FA67
+P 1500 1500
+F 0 "J1" H 1557 1967 50  0000 C CNN
+F 1 "USB_B_Micro" H 1557 1876 50  0000 C CNN
+F 2 "Connector_USB:USB_Micro-B_Molex_47346-0001" H 1650 1450 50  0001 C CNN
+F 3 "https://datasheet.octopart.com/473460001-Molex-datasheet-8350473.pdf" H 1650 1450 50  0001 C CNN
+F 4 "47346-0001" H 1500 1500 50  0001 C CNN "MPN"
+	1    1500 1500
+	1    0    0    -1  
+$EndComp
+Text Label 2100 1300 0    50   ~ 0
+VBUS
+Text Label 2100 1500 0    50   ~ 0
+D+
+Text Label 2100 1600 0    50   ~ 0
+D-
+NoConn ~ 1800 1700
+$Comp
+L power:GND #PWR0101
+U 1 1 5E04176A
+P 1500 2050
+F 0 "#PWR0101" H 1500 1800 50  0001 C CNN
+F 1 "GND" H 1505 1877 50  0000 C CNN
+F 2 "" H 1500 2050 50  0001 C CNN
+F 3 "" H 1500 2050 50  0001 C CNN
+	1    1500 2050
+	1    0    0    -1  
+$EndComp
+Text Label 1400 2050 3    50   ~ 0
+SHIELD
+Wire Wire Line
+	1400 2050 1400 1900
+Wire Wire Line
+	1500 1900 1500 2050
+Wire Wire Line
+	1800 1500 2100 1500
+Wire Wire Line
+	1800 1600 2100 1600
+Wire Wire Line
+	1800 1300 2100 1300
+$Comp
+L Device:C C?
+U 1 1 5E044E34
+P 3450 1950
+AR Path="/5DFEA50A/5E044E34" Ref="C?"  Part="1" 
+AR Path="/5DFEABE4/5E044E34" Ref="C11"  Part="1" 
+F 0 "C11" H 3565 1996 50  0000 L CNN
+F 1 "1uF" H 3565 1905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3488 1800 50  0001 C CNN
+F 3 "https://datasheet.octopart.com/CL21B105KAFNNNE-Samsung-Electro-Mechanics-datasheet-11721220.pdf" H 3450 1950 50  0001 C CNN
+F 4 "CL21B105KAFNNNE" H 3450 1950 50  0001 C CNN "MPN"
+	1    3450 1950
+	1    0    0    -1  
+$EndComp
+Text Label 3250 1600 2    50   ~ 0
+VBUS
+Wire Wire Line
+	3250 1600 3250 1800
+Wire Wire Line
+	3250 1800 3450 1800
+Connection ~ 3450 1800
+Wire Wire Line
+	3450 1800 3950 1800
+$Comp
+L Device:C C?
+U 1 1 5E0470CD
+P 5500 1950
+AR Path="/5DFEA50A/5E0470CD" Ref="C?"  Part="1" 
+AR Path="/5DFEABE4/5E0470CD" Ref="C12"  Part="1" 
+F 0 "C12" H 5615 1996 50  0000 L CNN
+F 1 "1uF" H 5615 1905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5538 1800 50  0001 C CNN
+F 3 "https://datasheet.octopart.com/CL21B105KAFNNNE-Samsung-Electro-Mechanics-datasheet-11721220.pdf" H 5500 1950 50  0001 C CNN
+F 4 "CL21B105KAFNNNE" H 5500 1950 50  0001 C CNN "MPN"
+	1    5500 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E046878
+P 5900 1950
+AR Path="/5DFEA50A/5E046878" Ref="C?"  Part="1" 
+AR Path="/5DFEABE4/5E046878" Ref="C13"  Part="1" 
+F 0 "C13" H 6015 1996 50  0000 L CNN
+F 1 "0.1uF" H 6015 1905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5938 1800 50  0001 C CNN
+F 3 "https://datasheet.octopart.com/CL21B104KACNNNC-Samsung-Electro-Mechanics-datasheet-11791079.pdf" H 5900 1950 50  0001 C CNN
+F 4 "CL21B104KACNNNC" H 5900 1950 50  0001 C CNN "MPN"
+	1    5900 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 1800 6250 1750
+Connection ~ 5500 1800
+Wire Wire Line
+	5500 1800 5900 1800
+Connection ~ 5900 1800
+Wire Wire Line
+	5900 1800 6250 1800
+Wire Wire Line
+	5150 1800 5500 1800
+$Comp
+L power:GND #PWR0102
+U 1 1 5E047EFF
+P 3450 2200
+F 0 "#PWR0102" H 3450 1950 50  0001 C CNN
+F 1 "GND" H 3455 2027 50  0000 C CNN
+F 2 "" H 3450 2200 50  0001 C CNN
+F 3 "" H 3450 2200 50  0001 C CNN
+	1    3450 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5E048353
+P 3850 2000
+F 0 "#PWR0103" H 3850 1750 50  0001 C CNN
+F 1 "GND" H 3855 1827 50  0000 C CNN
+F 2 "" H 3850 2000 50  0001 C CNN
+F 3 "" H 3850 2000 50  0001 C CNN
+	1    3850 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5E048A02
+P 5200 2000
+F 0 "#PWR0104" H 5200 1750 50  0001 C CNN
+F 1 "GND" H 5205 1827 50  0000 C CNN
+F 2 "" H 5200 2000 50  0001 C CNN
+F 3 "" H 5200 2000 50  0001 C CNN
+	1    5200 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5E048CF6
+P 5500 2200
+F 0 "#PWR0105" H 5500 1950 50  0001 C CNN
+F 1 "GND" H 5505 2027 50  0000 C CNN
+F 2 "" H 5500 2200 50  0001 C CNN
+F 3 "" H 5500 2200 50  0001 C CNN
+	1    5500 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5E048EC0
+P 5900 2200
+F 0 "#PWR0106" H 5900 1950 50  0001 C CNN
+F 1 "GND" H 5905 2027 50  0000 C CNN
+F 2 "" H 5900 2200 50  0001 C CNN
+F 3 "" H 5900 2200 50  0001 C CNN
+	1    5900 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 2200 5900 2100
+Wire Wire Line
+	5500 2100 5500 2200
+Wire Wire Line
+	5200 2000 5200 1900
+Wire Wire Line
+	5200 1900 5150 1900
+Wire Wire Line
+	3850 2000 3850 1900
+Wire Wire Line
+	3850 1900 3950 1900
+Wire Wire Line
+	3450 2200 3450 2100
+$Comp
+L power:+3.3V #PWR0107
+U 1 1 5E049EDD
+P 6250 1750
+F 0 "#PWR0107" H 6250 1600 50  0001 C CNN
+F 1 "+3.3V" H 6265 1923 50  0000 C CNN
+F 2 "" H 6250 1750 50  0001 C CNN
+F 3 "" H 6250 1750 50  0001 C CNN
+	1    6250 1750
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
